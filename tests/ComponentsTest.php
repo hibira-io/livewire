@@ -50,7 +50,11 @@ class ComponentsTest extends TestCase
 
         $this->assertStringContainsString('role="status"', $html);
         $this->assertStringContainsString('state_change', $html);
-        $this->assertStringContainsString('ライブ', $html);
+        // Older Laravel releases escape non-ASCII in @js as \uXXXX.
+        $this->assertTrue(
+            str_contains($html, 'ライブ') || str_contains(str_replace('\\', '', $html), 'u30e9u30a4u30d6'),
+            'The Japanese "live" label is missing.',
+        );
     }
 
     public function test_every_language_has_every_string(): void
