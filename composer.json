@@ -1,0 +1,70 @@
+{
+    "name": "hibira-io/livewire",
+    "description": "Realtime Livewire components on Hibira: who's here avatars, a connection light and live job batch progress without wire:poll",
+    "keywords": [
+        "livewire",
+        "laravel",
+        "laravel-echo",
+        "presence",
+        "realtime",
+        "websocket",
+        "job-batches",
+        "progress-bar",
+        "pusher",
+        "hibira"
+    ],
+    "homepage": "https://hibira.io",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hibira",
+            "homepage": "https://hibira.io"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/hibira-io/livewire/issues",
+        "docs": "https://github.com/hibira-io/livewire#readme",
+        "email": "support@hibira.io"
+    },
+    "require": {
+        "php": "^8.1",
+        "hibira-io/laravel": "^0.3|^0.4|^0.5",
+        "illuminate/broadcasting": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/bus": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/queue": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+        "livewire/livewire": "^3.0|^4.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0|^11.0",
+        "phpunit/phpunit": "^10.0|^11.0|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hibira\\Livewire\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hibira\\Livewire\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hibira\\Livewire\\HibiraLivewireServiceProvider"
+            ]
+        },
+        "branch-alias": {
+            "dev-main": "0.1.x-dev"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
